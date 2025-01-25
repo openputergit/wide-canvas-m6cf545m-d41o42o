@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+        }
+        
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1rem;
+            height: 100vh;
+            padding: 1rem;
+        }
+        
+        .box {
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .framework {
+            background-color: #2D3748;
+            grid-row: span 1;
+        }
+
+        .voice {
+            background-color: #FFD54F;
+            grid-row: span 1;
+        }
+
+        .logo {
+            background-color: #4DD0E1;
+            grid-row: span 2;
+        }
+
+        .typography {
+            background-color: #FF5722;
+        }
+
+        .iconography {
+            background-color: #C6FF00;
+            grid-row: span 1;
+        }
+
+        .color {
+            background-color: #FF5722;
+            grid-row: span 1;
+        }
+
+        .imagery {
+            background-color: #880E4F;
+            grid-row: span 1;
+        }
+
+        .motion {
+            background-color: #E1BEE7;
+            grid-row: span 1;
+        }
+
+        .framework-line {
+            stroke: white;
+            stroke-width: 2;
+        }
+
+        .dropbox-logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .color-squares {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .color-square {
+            width: 40px;
+            height: 40px;
+            background-color: #8B4513;
+        }
+
+        .imagery-box {
+            width: 100px;
+            height: 100px;
+            background-color: #FFCDD2;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-layout">
+        <div class="box framework">
+            <h2 class="text-white text-xl font-bold mb-4">Framework</h2>
+            <svg width="100%" height="100" viewBox="0 0 200 100">
+                <polyline points="20,80 100,20 180,80" class="framework-line" fill="none"/>
+                <circle cx="20" cy="80" r="4" fill="white"/>
+                <circle cx="100" cy="20" r="4" fill="white"/>
+                <circle cx="180" cy="80" r="4" fill="white"/>
+            </svg>
+        </div>
+
+        <div class="box voice">
+            <h2 class="text-gray-800 text-xl font-bold mb-4">Voice & Tone</h2>
+            <div class="text-6xl text-gray-800">"</div>
+            <div class="text-6xl text-gray-800 self-end">"</div>
+        </div>
+
+        <div class="box logo">
+            <h2 class="text-gray-800 text-xl font-bold mb-4">Logo</h2>
+            <div class="flex items-center justify-center flex-grow">
+                <svg class="dropbox-logo" viewBox="0 0 100 100">
+                    <path d="M25,20 L50,35 L75,20 L50,5 L25,20 M25,60 L50,75 L75,60 L50,45 L25,60 M50,35 L25,50 L50,65 L75,50 L50,35" fill="#0061FF"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="box typography">
+            <h2 class="text-white text-xl font-bold mb-4">Typography</h2>
+            <div class="text-8xl text-white font-bold">Aa</div>
+        </div>
+
+        <div class="box iconography">
+            <h2 class="text-gray-800 text-xl font-bold mb-4">Iconography</h2>
+            <i class="bi bi-lock-fill text-6xl text-gray-800"></i>
+        </div>
+
+        <div class="box color">
+            <h2 class="text-white text-xl font-bold mb-4">Color</h2>
+            <div class="color-squares">
+                <div class="color-square"></div>
+                <div class="color-square"></div>
+            </div>
+        </div>
+
+        <div class="box imagery">
+            <h2 class="text-white text-xl font-bold mb-4">Imagery</h2>
+            <div class="imagery-box"></div>
+        </div>
+
+        <div class="box motion">
+            <h2 class="text-gray-800 text-xl font-bold mb-4">Motion</h2>
+            <svg width="100%" height="60" viewBox="0 0 100 60">
+                <path d="M10,50 Q25,10 90,10" stroke="#6A1B9A" stroke-width="2" fill="none"/>
+                <circle cx="10" cy="50" r="3" fill="#6A1B9A"/>
+                <circle cx="90" cy="10" r="3" fill="#6A1B9A"/>
+            </svg>
+        </div>
+    </div>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
